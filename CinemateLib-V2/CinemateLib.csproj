@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3651EC51-5ABC-46C7-A564-6A2F8D84547D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CinemateAPI</RootNamespace>
+    <AssemblyName>CinemateAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\MovieInfoResult.cs" />
+    <Compile Include="Domain\PersonInfoResult.cs" />
+    <Compile Include="Domain\PersonSearchItem.cs" />
+    <Compile Include="Domain\PersonSearchResult.cs" />
+    <Compile Include="Domain\Photo.cs" />
+    <Compile Include="Domain\Profile.cs" />
+    <Compile Include="Domain\Status.cs" />
+    <Compile Include="Domain\Update.cs" />
+    <Compile Include="Domain\UpdateItem.cs" />
+    <Compile Include="Domain\UpdateItemObject.cs" />
+    <Compile Include="Domain\UpdateItemObjectMovie.cs" />
+    <Compile Include="Domain\Watch.cs" />
+    <Compile Include="Domain\WatchItem.cs" />
+    <Compile Include="CinemateAPI.cs" />
+    <Compile Include="Domain\CinemateFilmInfo.cs" />
+    <Compile Include="Domain\CinemateFilmItem.cs" />
+    <Compile Include="Domain\MovieListResult.cs" />
+    <Compile Include="Domain\Poster.cs" />
+    <Compile Include="Domain\PosterItem.cs" />
+    <Compile Include="Domain\KinopoiskInfo.cs" />
+    <Compile Include="OrderBy.cs" />
+    <Compile Include="Domain\Passkey.cs" />
+    <Compile Include="Domain\ImdbInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UrlFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
